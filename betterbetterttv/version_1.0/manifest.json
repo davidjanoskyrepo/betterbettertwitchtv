@@ -1,0 +1,37 @@
+{
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "exclude_matches": [
+        "*://*.twitch.tv/*.html",
+        "*://*.twitch.tv/*.html?*",
+        "*://*.twitch.tv/*.htm",
+        "*://*.twitch.tv/*.htm?*"
+      ],
+      "js": [
+        "run.js"
+      ],
+      "run_at":  "document_end",
+      "matches": [
+        "*://*.twitch.tv/*"
+      ]
+    }
+  ],
+  "description": "BetterBetterTTV enhances BetterTTV with new features, emotes, and more.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "manifest_version": 3,
+  "name": "BetterBetterTTV",
+  "permissions": [
+    "*://*.twitch.tv/*"
+  ],
+  "short_name": "BBTTV",
+  "version": "1.0",
+  "web_accessible_resources": [
+    {
+      "resources": [ "betterbetterttv.js" ],
+      "matches": [ "*://*.twitch.tv/*" ]
+    }
+  ]
+}
